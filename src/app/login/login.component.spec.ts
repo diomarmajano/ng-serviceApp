@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
-   let routerSpy: any;
+  let routerSpy: any;
   let alertSpy: any;
 
   beforeEach(async () => {

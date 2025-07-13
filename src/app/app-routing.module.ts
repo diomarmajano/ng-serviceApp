@@ -8,6 +8,9 @@ import { BalanceComponent } from './balance/balance.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PasswordComponent } from './password/password.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -21,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), HttpClientModule, CommonModule],
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
