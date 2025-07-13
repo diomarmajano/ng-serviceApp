@@ -7,12 +7,13 @@ import { Observable } from 'rxjs';
 })
 export class JsonService {
 
-  httpOptions ={
-    Headers: new HttpHeaders({
-      'Content-type': 'aplication/json'
-    })
+  httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
   }
   private JsonUrl= 'assets/balance.json';
+  
   private JsonUrlGit= 'https://diomarmajano.github.io/json-page/balance.json';
 
   constructor(private http: HttpClient) { }
