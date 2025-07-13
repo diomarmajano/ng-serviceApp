@@ -1,47 +1,20 @@
 <app-nav [titulo]="'Servicios'" [subtitulo]="'Lista de servicios registrados'"></app-nav>
 <div class="container mt-4">
             <div id="serviciosContainer" class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
+                <div *ngFor="let servicio of servicios" class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm rounded-4">
                         <div class="card-body">
-                            <h5 class="card-title badge text-bg-info">Juan Pérez</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Reparación</h6>
-                            <p class="card-text mb-1"><strong>RUT:</strong> 12.345.678-9</p>
-                            <p class="card-text mb-1"><strong>Contacto:</strong> 987654321</p>
-                            <p class="card-text mb-1"><strong>Dispositivo:</strong> Móvil</p>
-                            <p class="card-text mb-1"><strong>Fecha:</strong> 2025-06-01</p>
-                            <p class="card-text mb-1 badge text-bg-success"><strong>Valor:</strong> $15.000</p>
-                            <p class="card-text"><strong>Detalles:</strong> Cambio de pantalla</p>
+                            <h5 class="card-title badge text-bg-info">{{servicio.cliente}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{servicio.servicio}}</h6>
+                            <p class="card-text mb-1"><strong>RUT:</strong>{{servicio.identificador}}</p>
+                            <p class="card-text mb-1"><strong>Contacto:</strong> {{servicio.contacto}}</p>
+                            <p class="card-text mb-1"><strong>Dispositivo:</strong> {{servicio.dispositivo}}</p>
+                            <p class="card-text mb-1"><strong>Fecha:</strong> {{servicio.fecha}}</p>
+                            <p class="card-text mb-1 badge text-bg-success"><strong>Valor:</strong> ${{servicio.valor}}</p>
+                            <p class="card-text"><strong>Detalles:</strong> {{servicio.detalles}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm rounded-4">
-                        <div class="card-body">
-                            <h5 class="card-title badge text-bg-info">María López</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Garantía</h6>
-                            <p class="card-text mb-1"><strong>RUT:</strong> 10.987.654-3</p>
-                            <p class="card-text mb-1"><strong>Contacto:</strong> 912345678</p>
-                            <p class="card-text mb-1"><strong>Dispositivo:</strong> Tablet</p>
-                            <p class="card-text mb-1"><strong>Fecha:</strong> 2025-06-05</p>
-                            <p class="card-text mb-1 badge text-bg-success"><strong>Valor:</strong> $0</p>
-                            <p class="card-text"><strong>Detalles:</strong> Revisión por falla de fábrica</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm rounded-4">
-                        <div class="card-body">
-                            <h5 class="card-title badge text-bg-info">Pedro González</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Revisión</h6>
-                            <p class="card-text mb-1"><strong>RUT:</strong> 15.222.333-4</p>
-                            <p class="card-text mb-1"><strong>Contacto:</strong> 998877665</p>
-                            <p class="card-text mb-1"><strong>Dispositivo:</strong> Otro</p>
-                            <p class="card-text mb-1"><strong>Fecha:</strong> 2025-06-08</p>
-                            <p class="card-text mb-1 badge text-bg-success"><strong>Valor:</strong> $5.000</p>
-                            <p class="card-text"><strong>Detalles:</strong> Diagnóstico general</p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
